@@ -10,7 +10,7 @@ import HomeInfo from '../components/HomeInfo'
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(0);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIslandForScreenSize = ()=>{
     let screenScale = null;
@@ -40,7 +40,7 @@ const Home = () => {
   }
 
   const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
-  const [planeScale, planePosition, planeRotation] = adjustIslandForScreenSize();
+  const [planeScale, planePosition, planeRotation] = adjustPlaneForScreenSize();
 
   return (
       <section className="w-full h-screen relative">
@@ -61,8 +61,8 @@ const Home = () => {
 
             <Plane
               isRotating={isRotating}
-              planeScale={planeScale}
-              planePosition={planePosition}
+              scale={planeScale}
+              position={planePosition}
               rotation={planeRotation}
             />
             <Bird/>
