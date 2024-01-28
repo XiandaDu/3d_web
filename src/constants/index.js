@@ -4,58 +4,49 @@ import {
     contact,
     css,
     estate,
-    express,
     git,
     github,
     html,
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
-    nextjs,
     nodejs,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
-    summiz,
     tailwindcss,
     threads,
-    typescript
+    springboot,
+    docker,
+    typescript,
+    
 } from "../assets/icons";
 
 export const skills = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        imageUrl: springboot,
+        name: "Spring Boot",
+        type: "Framework",
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
+        imageUrl: react,
+        name: "React",
+        type: "Framework",
+    },
+    {
+        imageUrl: docker,
+        name: "Docker",
+        type: "Tech",
     },
     {
         imageUrl: git,
         name: "Git",
-        type: "Version Control",
+        type: "Tech",
     },
     {
         imageUrl: github,
         name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
+        type: "Tech",
     },
     {
         imageUrl: mongodb,
@@ -63,49 +54,29 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
         imageUrl: nodejs,
         name: "Node.js",
-        type: "Backend",
+        type: "Framework",
     },
     {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Language",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
+        imageUrl: html,
+        name: "HTML",
+        type: "Language",
     },
     {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
+        imageUrl: css,
+        name: "CSS",
+        type: "Language",
     },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
+        type: "Language",
     }
 ];
 
@@ -217,12 +188,5 @@ export const projects = [
         name: 'Real-Estate Application',
         description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
         link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
     }
 ];

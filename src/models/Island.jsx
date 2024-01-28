@@ -1,5 +1,5 @@
 import { useRef, useEffect} from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame, useThree} from "@react-three/fiber"
 import islandScene from '../assets/3d/island.glb'
 import {a} from "@react-spring/three"
@@ -8,7 +8,9 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     const islandRef = useRef();
     const {gl, viewport} = useThree(); //get render params
     const { nodes, materials } = useGLTF(islandScene); //a hook to handle 3d models
-
+    const { animations } = useGLTF(islandScene);
+    const {actions} = useAnimations(animations, islandRef)
+  
     const lastX = useRef(0); //create a static hook, get last mouse x position
     const rotationSpeed = useRef(0);
     const dampingFactor = 0.95;
@@ -64,17 +66,18 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
             const rotation = islandRef.current.rotation.y;
             const normalizedRotation = ((rotation % (2*Math.PI)) + 2*Math.PI) % (2*Math.PI);
             // Set the current stage based on the island's orientation
+            const angle = 0.3
             switch (true) {
-              case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-                setCurrentStage(4);
-                break;
-              case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-                setCurrentStage(3);
-                break;
-              case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+              case normalizedRotation >= 4.71-angle && normalizedRotation <= 4.71+angle:
                 setCurrentStage(2);
                 break;
-              case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+              case normalizedRotation >= 3.14-angle && normalizedRotation <= 3.14+angle:
+                setCurrentStage(3);
+                break;
+              case normalizedRotation >= 1.57-angle && normalizedRotation <= 1.57+angle:
+                setCurrentStage(4);
+                break;
+              case normalizedRotation >= 6.28-angle || normalizedRotation <= angle:
                 setCurrentStage(1);
                 break;
               default:
@@ -98,6 +101,10 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
             document.removeEventListener('keyup', handleKeyUp);
         }
     }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
+
+    useEffect(() => {
+        actions["The Life"].play();
+      }, []);
 
 
   return (
