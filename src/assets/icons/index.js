@@ -6,8 +6,6 @@ import html from './html.svg'
 import javascript from './javascript.svg'
 import mongodb from './mongodb.svg'
 import motion from './motion.svg'
-import mui from './mui.svg'
-import nextjs from './nextjs.svg'
 import nodejs from './nodejs.svg'
 import react from './react.svg'
 import tailwindcss from './tailwindcss.svg'
@@ -23,8 +21,22 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import springboot from './springboot.svg'
 import docker from './docker.svg'
+import vue from './vue.svg'
+import mysql from './mysql.svg'
+import redis from './redis.svg'
+import cpp from './cpp.svg'
+import java from './java.svg'
+import python from './python.svg'
+import matlab from './matlab.svg'
 
 export {
+    matlab,
+    cpp,
+    java,
+    python,
+    mysql,
+    redis,
+    vue,
     docker,
     css,
     express,
@@ -34,8 +46,6 @@ export {
     javascript,
     mongodb,
     motion,
-    mui,
-    nextjs,
     nodejs,
     react,
     tailwindcss,

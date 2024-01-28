@@ -25,17 +25,24 @@ const About = () => {
       <div className='py-10 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
 
-        <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
-            <div className='block-container w-20 h-20' key={skill.name}>
-              <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex flex-col justify-center items-center'>
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className='w-1/2 h-1/2 object-contain'
-                />
-                <div className='text-center'>{skill.name}</div>
+        <div>
+          {Array.from(new Set(skills.map(skill => skill.type))).map((type) => (
+            <div className="mt-6" key={type}>
+              <h4 className="text-xl font-bold mb-4">{type}</h4>
+              <div className='flex flex-wrap gap-12 mt-6'>
+                {skills.filter((skill) => skill.type === type).map((skill) => (
+                  <div className='block-container w-20 h-20' key={skill.name}>
+                    <div className='btn-back rounded-xl' />
+                    <div className='btn-front rounded-xl flex flex-col justify-center items-center'>
+                      <img
+                        src={skill.imageUrl}
+                        alt={skill.name}
+                        className='w-1/2 h-1/2 object-contain'
+                      />
+                      <div className='text-center'>{skill.name}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

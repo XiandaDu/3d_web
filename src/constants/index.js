@@ -18,8 +18,14 @@ import {
     threads,
     springboot,
     docker,
+    vue,
+    mysql,
+    redis,
+    python,
+    java,
+    cpp,
+    matlab,
     typescript,
-    
 } from "../assets/icons";
 
 export const skills = [
@@ -34,19 +40,34 @@ export const skills = [
         type: "Framework",
     },
     {
+        imageUrl: vue,
+        name: "Vue",
+        type: "Framework",
+    },
+    {
         imageUrl: docker,
         name: "Docker",
-        type: "Tech",
+        type: "Technical Tool",
     },
     {
         imageUrl: git,
         name: "Git",
-        type: "Tech",
+        type: "Technical Tool",
     },
     {
         imageUrl: github,
         name: "GitHub",
-        type: "Tech",
+        type: "Technical Tool",
+    },
+    {
+        imageUrl: mysql,
+        name: "MySql",
+        type: "Database",
+    },
+    {
+        imageUrl: redis,
+        name: "Redis",
+        type: "Database",
     },
     {
         imageUrl: mongodb,
@@ -57,6 +78,21 @@ export const skills = [
         imageUrl: nodejs,
         name: "Node.js",
         type: "Framework",
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "Language",
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "Language",
+    },
+    {
+        imageUrl: cpp,
+        name: "C++",
+        type: "Language",
     },
     {
         imageUrl: javascript,
@@ -74,9 +110,14 @@ export const skills = [
         type: "Language",
     },
     {
+        imageUrl: matlab,
+        name: "Matlab",
+        type: "Language",
+    },
+    {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
-        type: "Language",
+        type: "Technical Tool",
     }
 ];
 
