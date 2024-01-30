@@ -28,8 +28,10 @@ import cpp from './cpp.svg'
 import java from './java.svg'
 import python from './python.svg'
 import matlab from './matlab.svg'
+import aws from './aws.svg'
 
 export {
+    aws,
     matlab,
     cpp,
     java,

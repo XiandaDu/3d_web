@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { ltimindtree, shijixinyuan, codemao } from "../assets/images";
 import {
     car,
     contact,
@@ -25,6 +25,7 @@ import {
     java,
     cpp,
     matlab,
+    aws,
     typescript,
 } from "../assets/icons";
 
@@ -45,8 +46,18 @@ export const skills = [
         type: "Framework",
     },
     {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Framework",
+    },
+    {
         imageUrl: docker,
         name: "Docker",
+        type: "Technical Tool",
+    },
+    {
+        imageUrl: aws,
+        name: "AWS",
         type: "Technical Tool",
     },
     {
@@ -60,24 +71,9 @@ export const skills = [
         type: "Technical Tool",
     },
     {
-        imageUrl: mysql,
-        name: "MySql",
-        type: "Database",
-    },
-    {
-        imageUrl: redis,
-        name: "Redis",
-        type: "Database",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Framework",
+        imageUrl: tailwindcss,
+        name: "Tailwind CSS",
+        type: "Technical Tool",
     },
     {
         imageUrl: java,
@@ -115,65 +111,58 @@ export const skills = [
         type: "Language",
     },
     {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Technical Tool",
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "Database",
+    },
+    {
+        imageUrl: redis,
+        name: "Redis",
+        type: "Database",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Database",
     }
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Software Engineer",
+        company_name: "LTIMindtree",
+        icon: ltimindtree,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "Jan 2024 - April 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Mulesoft API development",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Backend Developer",
+        company_name: "Shenzhen Dianmao Tech Co. Ltd",
+        icon: codemao,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "May 2023 - Aug 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed a company bot to test natural language processing AIs using Spring Boot.",
+            "Utilized OkHttp, Retrofit2, Postman and Jackson to connect the APIs of natural language AI into the company bot for my colleagues to use and test.",
+            "Created RESTful APIs optimized for high QPS (Queries Per Second) and deployed it into the company server for commercial use.",
+            "Collected and created dataset for the fine-tuning of AIs. I explored the possiblity to combine the current business with customized AI.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        title: "Frontend Developer",
+        company_name: "Guizhou shijixinyuan Tech Co. Ltd",
+        icon: shijixinyuan,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "Jun 2022 - Aug 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Applied Vue.js, Vue Router, JavaScript, and CSS to create and improve the company's website with more customized color and layout.",
+            "Used Ajax to send asynchronous HTTP requests, interact with the backend for data, and update and render the page based on the returned results.",
+            "Perused the documents of the cooperative company's products, sorted out the flow chart to colleagues, and improved the overall efficiency of the company.",
         ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    }
 ];
 
 export const socialLinks = [

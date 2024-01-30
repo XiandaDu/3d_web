@@ -1,15 +1,13 @@
 import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
 import logo from './logo.svg'
+import ltimindtree from './ltimindtree.png'
+import codemao from './codemao.jpg'
+import shijixinyuan from './shijixinyuan.jpg'
 
 export {
     hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
+    logo,
+    ltimindtree,
+    codemao,
+    shijixinyuan
 }
