@@ -3,9 +3,9 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
 import Sky from '../models/Sky'
-import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 import HomeInfo from '../components/HomeInfo'
+import Dragon from '../models/Dragon'
 
 
 const Home = () => {
@@ -27,14 +27,14 @@ const Home = () => {
 
   const adjustPlaneForScreenSize = ()=>{
     let screenScale, screenPosition;
-    let rotation = [0, 20, 0];
+    let rotation = [0, 0, 0];
 
     if (window.innerWidth < 768){
-      screenScale = [1.5, 1.5, 1.5]; 
-      screenPosition = [0, -1.5, 0];
+      screenScale = [0.0007, 0.0007, 0.0007]; 
+      screenPosition = [0, -4, -2];
     } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
+      screenScale = [0.001, 0.001, 0.001];
+      screenPosition = [0, -4, -3];
     }
     return [screenScale, screenPosition, rotation];
   }
@@ -65,7 +65,7 @@ const Home = () => {
               position={planePosition}
               rotation={planeRotation}
             />
-            <Bird/>
+            <Dragon/>
             <Sky
               isRotating={isRotating}
             />
