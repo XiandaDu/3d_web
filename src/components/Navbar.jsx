@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 
+//The top-most router. It contains the base part(full of 3d models), the about section which talks about my past work exps&skills and /projects part
 const Navbar = () => {
   return (
     <header className="header">

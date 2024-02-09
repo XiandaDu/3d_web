@@ -1,5 +1,6 @@
 import { Html } from "@react-three/drei"
 
+//create a spinning circle as the loading animation
 const Loader = () => {
   return (
     <Html>

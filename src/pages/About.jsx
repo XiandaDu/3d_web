@@ -5,6 +5,7 @@ import CTA from "../components/CTA";
 
 const About = () => {
   return (
+    // welcome information
     <section className='max-container'>
       <h1 className='head-text'>
         Hello, I'm{" "}
@@ -15,6 +16,7 @@ const About = () => {
         👋
       </h1>
 
+      {/* brief self-introduction */}
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
           Computer Engineer in Canada, specializing in React, Spring Boot and Vue
@@ -24,11 +26,12 @@ const About = () => {
 
       <div className='py-10 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
-
+        {/*itrate through my skills, find different types*/}
         <div>
           {Array.from(new Set(skills.map(skill => skill.type))).map((type) => (
             <div className="mt-6" key={type}>
               <h4 className="text-xl font-bold mb-4">{type}</h4>
+              {/*Based on the type, render the skills, so that skills are arranged in types, which is clearer */}
               <div className='flex flex-wrap gap-12 mt-6'>
                 {skills.filter((skill) => skill.type === type).map((skill) => (
                   <div className='block-container w-20 h-20' key={skill.name}>
@@ -49,6 +52,7 @@ const About = () => {
         </div>
       </div>
 
+      {/* Next Section, work exps */}
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience.</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
@@ -58,6 +62,7 @@ const About = () => {
           </p>
         </div>
 
+        {/* Use the vertical time line lib to create a time line of my past work exps */}
         <div className='mt-12 flex'>
           <VerticalTimeline>
             {experiences.map((experience, index) => (
@@ -109,6 +114,7 @@ const About = () => {
         </div>
       </div>
 
+      {/* In case someone wants to contact me from here, add a btn to jump to my contact */}
       <hr className='border-slate-200' />
       <CTA/>
     </section>

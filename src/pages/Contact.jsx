@@ -27,6 +27,7 @@ const Contact = () => {
     setLoading(true);
     setCurrentAnimation('hit')
 
+    //Use emailjs to send email to my mailbox
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,

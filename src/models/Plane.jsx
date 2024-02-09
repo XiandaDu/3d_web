@@ -2,11 +2,11 @@ import planeScene from '../assets/3d/plane.glb'
 import { useAnimations, useGLTF } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 
+//When the mouse is clicked, let the plane anime play
 const Plane = ({isRotating, ...props}) => {
-  const ref = useRef();
+  const planeRef = useRef();
   const {scene, animations} = useGLTF(planeScene);
-  const {actions} = useAnimations(animations, ref)
-  console.log(animations)
+  const {actions} = useAnimations(animations, planeRef)
 
   useEffect(() => {
     if (isRotating) {
@@ -15,8 +15,9 @@ const Plane = ({isRotating, ...props}) => {
       actions["Scene"].stop();
     }
   }, [actions, isRotating]);
+
   return (
-    <mesh {...props} ref={ref}>
+    <mesh {...props} ref={planeRef}>
         <primitive object={scene}/>
     </mesh>
   )

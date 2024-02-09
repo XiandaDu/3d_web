@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import CTA from "../components/CTA";
 import { projects } from "../constants";
 import { arrow } from "../assets/icons";
