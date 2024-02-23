@@ -17,4 +17,22 @@ Other techs used: TailwindCSS, eslint, self-made hooks.
 4. Projects Page
     It contains a summary of projects that I have done. 
 
+### Deployment
+If you want to clone the project, please feel free to do so. 
+
+Install Dependencies
+```
+npm install
+```
+
+Launch Project
+```
+npm run dev
+```
+
+After edition, if you want to pack it up, run
+```
+npm run build
+```
+
 ### LOOKING FORWARD TO CONNECT YOU!!
