@@ -2,6 +2,7 @@
 
 ### Introduction
 This is Xianda's personal profile. It is a React+Vite project. The characteristic of this project is it uses Three.js and render 3D models in the frontend. 
+3D models are downloaded from sketchfab. 
 Other techs used: TailwindCSS, eslint, self-made hooks. 
 
 ### Strucutre
