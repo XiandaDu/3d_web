@@ -14,11 +14,12 @@ const Projects = () => {
       </h1>
 
       <p className='text-slate-500 mt-2 leading-relaxed'>
-        I've embarked on numerous projects throughout the years, but these are
-        the ones I hold closest to my heart. Many of them are open-source, so if
-        you come across something that piques your interest, feel free to
-        explore the codebase and contribute your ideas for further enhancements.
-        Your collaboration is highly valued!
+      During my tenure as a sophomore Computer Engineering student at the University of Waterloo, 
+      I've engaged in a spectrum of tech projects, encompassing web development with Spring, Python data science endeavors, 
+      neural network explorations, and game development. These projects represent my passion for technology and innovation. 
+      Notably, many of these initiatives are open-source, reflecting my belief in collaborative learning and knowledge sharing. 
+      I invite you to explore these projects, as your insights and feedback are invaluable for their continual improvement 
+      and evolution.
       </p>
 
       <div className='flex flex-wrap my-20 gap-16'>
