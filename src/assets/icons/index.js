@@ -1,15 +1,4 @@
-import css from './css.svg'
-import express from './express.svg'
-import git from './git.svg'
-import github from './github.svg'
-import html from './html.svg'
-import javascript from './javascript.svg'
-import mongodb from './mongodb.svg'
-import motion from './motion.svg'
-import nodejs from './nodejs.svg'
-import react from './react.svg'
-import tailwindcss from './tailwindcss.svg'
-import typescript from './typescript.svg'
+
 import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import car from './car.svg'
@@ -19,17 +8,37 @@ import snapgram from './snapgram.svg'
 import threads from './threads.svg'
 import arrow from './arrow.svg'
 import contact from './contact.svg'
-import springboot from './springboot.svg'
-import docker from './docker.svg'
-import vue from './vue.svg'
-import mysql from './mysql.svg'
-import redis from './redis.svg'
-import cpp from './cpp.svg'
-import java from './java.svg'
-import python from './python.svg'
-import matlab from './matlab.svg'
-import aws from './aws.svg'
+import motion from './motion.svg'
 
+
+
+//Skills, 24 in total
+import express from './skills/express.svg'
+import css from './skills/css.svg'
+import git from './skills/git.svg'
+import github from './skills/github.svg'
+import html from './skills/html.svg'
+import javascript from './skills/javascript.svg'
+import mongodb from './skills/mongodb.svg'
+import nodejs from './skills/nodejs.svg'
+import react from './skills/react.svg'
+import tailwindcss from './skills/tailwindcss.svg'
+import typescript from './skills/typescript.svg'
+import springboot from './skills/springboot.svg'
+import docker from './skills/docker.svg'
+import vue from './skills/vue.svg'
+import mysql from './skills/mysql.svg'
+import redis from './skills/redis.svg'
+import cpp from './skills/cpp.svg'
+import java from './skills/java.svg'
+import python from './skills/python.svg'
+import matlab from './skills/matlab.svg'
+import aws from './skills/aws.svg'
+import jupyter from './skills/jupyter.svg'
+import materialUI from './skills/materialUI.svg'
+import passport from './skills/passport.svg'
+
+//31 exports
 export {
     aws,
     matlab,
@@ -61,5 +70,8 @@ export {
     threads,
     arrow,
     contact,
-    springboot
+    springboot,
+    jupyter,
+    materialUI,
+    passport
 }

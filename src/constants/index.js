@@ -27,6 +27,10 @@ import {
     matlab,
     aws,
     typescript,
+    jupyter,
+    express,
+    materialUI,
+    passport
 } from "../assets/icons";
 
 export const skills = [
@@ -46,8 +50,13 @@ export const skills = [
         type: "Framework",
     },
     {
+        imageUrl: express,
+        name: "ExpressJs",
+        type: "Framework",
+    },
+    {
         imageUrl: nodejs,
-        name: "Node.js",
+        name: "NodeJs",
         type: "Framework",
     },
     {
@@ -61,18 +70,28 @@ export const skills = [
         type: "Technical Tool",
     },
     {
+        imageUrl: jupyter,
+        name: "Jupyter",
+        type: "Technical Tool",
+    },
+    {
         imageUrl: git,
         name: "Git",
         type: "Technical Tool",
     },
     {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Technical Tool",
+        imageUrl: passport,
+        name: "Passport",
+        type: "Technical Tool"
     },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
+        type: "Technical Tool",
+    },
+    {
+        imageUrl: materialUI,
+        name: "MaterialUI",
         type: "Technical Tool",
     },
     {
@@ -93,6 +112,11 @@ export const skills = [
     {
         imageUrl: javascript,
         name: "JavaScript",
+        type: "Language",
+    },
+    {
+        imageUrl: typescript,
+        name: "TypeScript",
         type: "Language",
     },
     {
@@ -135,9 +159,12 @@ export const experiences = [
         iconBg: "#accbe1",
         date: "Jan 2024 - April 2024",
         points: [
-            "Mulesoft API development",
+           "Played a pivotal role in the development, test and deployment of some crucial internal APIs. Achieved seamless data transformation and system integration using Spring, OAuth2, and Jazz.",
+           "Diligently debugged complex codebases of large-scale projects, collaborating effectively with cross-functional teams and utilizing skills in SQL, JDBC, and SOAPUI.",
+           "Engineered a standalone project automating cloud-based log downloads, leveraging script automation, Gson, HttpClient, and MuleSoft.",
+           "Actively documented challenges, analyzed development and deployment hurdles, and proactively annotated legacy code to enhance company efficiency across various aspects."
         ],
-    },
+    },    
     {
         title: "Backend Developer",
         company_name: "Shenzhen Dianmao Tech Co. Ltd",
