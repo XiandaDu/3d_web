@@ -1,4 +1,3 @@
-
 import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import car from './car.svg'
@@ -12,7 +11,13 @@ import motion from './motion.svg'
 
 
 
-//Skills, 24 in total
+
+
+
+
+
+
+//Skills, 27 in total
 import express from './skills/express.svg'
 import css from './skills/css.svg'
 import git from './skills/git.svg'
@@ -37,6 +42,9 @@ import aws from './skills/aws.svg'
 import jupyter from './skills/jupyter.svg'
 import materialUI from './skills/materialUI.svg'
 import passport from './skills/passport.svg'
+import numpy from './skills/numpy.svg'
+import pytorch from './skills/pytorch.svg'
+import tensorflow from './skills/tensorflow.svg'
 
 //31 exports
 export {
@@ -73,5 +81,8 @@ export {
     springboot,
     jupyter,
     materialUI,
-    passport
+    passport,
+    numpy,
+    tensorflow,
+    pytorch
 }

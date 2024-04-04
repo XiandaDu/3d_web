@@ -42,7 +42,7 @@ const About = () => {
                         alt={skill.name}
                         className='w-1/2 h-1/2 object-contain'
                       />
-                      <div className='text-center'>{skill.name}</div>
+                      <div className='text-center text-sm'>{skill.name}</div>
                     </div>
                   </div>
                 ))}

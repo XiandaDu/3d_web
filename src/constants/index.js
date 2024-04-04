@@ -30,7 +30,10 @@ import {
     jupyter,
     express,
     materialUI,
-    passport
+    passport,
+    numpy,
+    tensorflow,
+    pytorch
 } from "../assets/icons";
 
 export const skills = [
@@ -70,20 +73,15 @@ export const skills = [
         type: "Technical Tool",
     },
     {
-        imageUrl: jupyter,
-        name: "Jupyter",
-        type: "Technical Tool",
-    },
-    {
         imageUrl: git,
         name: "Git",
         type: "Technical Tool",
     },
-    {
-        imageUrl: passport,
-        name: "Passport",
-        type: "Technical Tool"
-    },
+    // {
+    //     imageUrl: passport,
+    //     name: "Passport",
+    //     type: "Technical Tool"
+    // },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -93,6 +91,26 @@ export const skills = [
         imageUrl: materialUI,
         name: "MaterialUI",
         type: "Technical Tool",
+    },
+    {
+        imageUrl: jupyter,
+        name: "Jupyter",
+        type: "Machine Learning Related",
+    },
+    {
+        imageUrl: numpy,
+        name: "numpy",
+        type: "Machine Learning Related",
+    },
+    {
+        imageUrl: tensorflow,
+        name: "TensorFlow",
+        type: "Machine Learning Related",
+    },
+    {
+        imageUrl: pytorch,
+        name: "PyTorch",
+        type: "Machine Learning Related",
     },
     {
         imageUrl: java,
