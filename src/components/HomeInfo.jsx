@@ -22,21 +22,21 @@ const renderContent = {
     ),
     2: (
         <InfoBox
-            text = "I am familiar with React, Spring Boot and Vue. Here is my detailed technology stack"
+            text = "I am familiar with React, Spring Boot, and Vue. Here are my detailed skills and past work experiences"
             link = "/about"
             btnText= "learn more"
         />
     ),
     3: (
         <InfoBox
-            text = "I have also completed projects in multiple fields. Want to know more?"
+            text = "My portfolio boasts a rich collection of projects, each showcasing my various skills. Care to take a peek?"
             link = "/projects"
             btnText= "Visit my Projects"
         />
     ),
     4: (
         <InfoBox
-            text = "Are you interested in me? You can contact me right away"
+            text = "Interested in connecting further? Feel free to reach out! You can contact me in 10 seconds!"
             link = "/contact"
             btnText= "Let's chat"
         />

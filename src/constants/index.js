@@ -219,12 +219,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/XiandaDu',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://ca.linkedin.com/in/xianda-du-304081250',
     }
 ];
 
@@ -232,8 +232,8 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Object Detection',
-        description: 'The Object Detection project leverages Python and Numpy to implement algorithms for identifying and localizing objects within images.',
+        name: 'ViewTube',
+        description: 'This project is a dynamic video-playing platform that showcases my expertise in web development. With a sleek interface powered by React.js, materialUI, axios and RapidAPI, it offers seamless video playback, real-time recommendations, and data synchronization in channel or video statistics.',
         link: 'https://github.com/XiandaDu/Object-Recognition',
     },
     {
