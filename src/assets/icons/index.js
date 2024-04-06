@@ -1,14 +1,14 @@
 import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import car from './car.svg'
-import estate from './estate.svg'
-import pricewise from './pricewise.svg'
+import digit from './digit.svg'
+import videoplayer from './videoplayer.svg'
 import snapgram from './snapgram.svg'
-import threads from './threads.svg'
+import school from './school.svg'
 import arrow from './arrow.svg'
 import contact from './contact.svg'
 import motion from './motion.svg'
-
+import note from './note.svg'
 
 
 
@@ -72,10 +72,11 @@ export {
     linkedin,
     twitter,
     car,
-    estate,
-    pricewise,
+    digit,
+    videoplayer,
     snapgram,
-    threads,
+    note,
+    school,
     arrow,
     contact,
     springboot,
