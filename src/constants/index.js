@@ -179,8 +179,8 @@ export const experiences = [
         date: "Jan 2024 - April 2024",
         points: [
            "Played a pivotal role in the development, test and deployment of some crucial internal APIs. Achieved seamless data transformation and system integration using Spring, OAuth2, and Jazz.",
-           "Diligently debugged complex codebases of large-scale projects, collaborating effectively with cross-functional teams and utilizing skills in SQL, JDBC, and SOAPUI.",
-           "Engineered a standalone project automating cloud-based log downloads, leveraging script automation, Gson, HttpClient, and MuleSoft.",
+           "Diligently debugged complex codebases of large-scale projects, collaborating effectively with cross-functional teams and utilizing skills in databse management using SQL and JDBC.",
+           "Engineered a standalone project automating cloud-based log downloads, leveraging script automation, Gson, HttpClient, SOAPUI and MuleSoft for development and stress testing",
            "Actively documented challenges, analyzed development and deployment hurdles, and proactively annotated legacy code to enhance company efficiency across various aspects."
         ],
     },    
@@ -225,7 +225,7 @@ export const socialLinks = [
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://ca.linkedin.com/in/xianda-du-304081250',
+        link: 'https://ca.linkedin.com/in/xianda',
     }
 ];
 
@@ -236,6 +236,7 @@ export const projects = [
         name: 'ViewTube',
         description: 'This project is a dynamic video-playing platform that showcases my expertise in web development. With a sleek interface powered by React.js, materialUI, axios and RapidAPI, it offers seamless video playback, real-time recommendations, and data synchronization in channel or video statistics.',
         link: 'https://github.com/XiandaDu/ViewTube',
+        demo: 'http://viewtube.allendu.me'
     },
     {
         iconUrl: note,
@@ -243,6 +244,7 @@ export const projects = [
         name: 'Note-App',
         description: 'This is a note-taking application that seamlessly integrates with Google login for user authentication via Passport.js. This project crafted MongoDB for data storage and Mongoose for ORM. Also, leveraging the fusion of Express.js and EJS, it delivers a user-friendly interface.',
         link: 'https://github.com/XiandaDu/Note-App',
+        demo: 'http://note-app.allendu.me'
     },
     {
         iconUrl: digit,
@@ -250,6 +252,7 @@ export const projects = [
         name: 'Digit Recognition',
         description: 'This is a digit recognition project, powered by Python, TensorFlow, and Jupyter Notebook for model training and evaluation, coupled with React.js for the frontend deployed on Vercel, enables the accurate identification of handwritten digits.',
         link: 'https://github.com/XiandaDu/Digit-Recognition',
+        demo: 'http://digit.allendu.me'
     },
     {
         iconUrl: snapgram,
@@ -257,6 +260,7 @@ export const projects = [
         name: 'Real Time Chat',
         description: 'Real-time chat application, crafted using Vue.js for the frontend, Spring Boot for the backend, and Websocket technology facilitated by socket.js, fosters real-time communication allowing users to exchange messages instantaneously in a dynamic and interactive environment.',
         link: 'https://github.com/XiandaDu/Real-Time-Chat',
+        demo: 'http://real-time-chat.allendu.me'
     },
     {
         iconUrl: school,
@@ -264,5 +268,6 @@ export const projects = [
         name: 'Campus Management System',
         description: 'The Campus Management System, developed using Spring Boot, MyBatis, and MySQL, along with Vue.js for the frontend, offers an integrated platform for streamlining administrative tasks, student management and teacher management within educational institutions.',
         link: 'https://github.com/XiandaDu/Campus-Management-System',
+        demo: 'http://www.allendu.me:81'
     },
 ];
