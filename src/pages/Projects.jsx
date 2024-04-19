@@ -59,6 +59,7 @@ const Projects = () => {
                   />
                 </div>
                 <div className='mt-2 flex items-center gap-2 font-poppins'>
+                {project.demo &&  
                   <Link
                     to={project.demo}
                     target='_blank'
@@ -67,11 +68,14 @@ const Projects = () => {
                   >
                     Live Demo Link
                   </Link>
+                }
+                {project.demo &&  
                   <img
                     src={arrow}
                     alt='arrow'
                     className='w-4 h-4 object-contain'
                   />
+                }
                 </div>
               </div>
             </div>

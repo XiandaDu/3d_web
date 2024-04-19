@@ -244,7 +244,7 @@ export const projects = [
         name: 'Note-App',
         description: 'This is a note-taking application that seamlessly integrates with Google login for user authentication via Passport.js. This project crafted MongoDB for data storage and Mongoose for ORM. Also, leveraging the fusion of Express.js and EJS, it delivers a user-friendly interface.',
         link: 'https://github.com/XiandaDu/Note-App',
-        demo: 'http://note-app.allendu.me'
+        demo: null
     },
     {
         iconUrl: digit,
@@ -260,7 +260,7 @@ export const projects = [
         name: 'Real Time Chat',
         description: 'Real-time chat application, crafted using Vue.js for the frontend, Spring Boot for the backend, and Websocket technology facilitated by socket.js, fosters real-time communication allowing users to exchange messages instantaneously in a dynamic and interactive environment.',
         link: 'https://github.com/XiandaDu/Real-Time-Chat',
-        demo: 'http://real-time-chat.allendu.me'
+        demo: null
     },
     {
         iconUrl: school,
@@ -268,6 +268,6 @@ export const projects = [
         name: 'Campus Management System',
         description: 'The Campus Management System, developed using Spring Boot, MyBatis, and MySQL, along with Vue.js for the frontend, offers an integrated platform for streamlining administrative tasks, student management and teacher management within educational institutions.',
         link: 'https://github.com/XiandaDu/Campus-Management-System',
-        demo: 'http://www.allendu.me:81'
+        demo: 'http://3.228.74.131:81'
     },
 ];
