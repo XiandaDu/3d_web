@@ -55,7 +55,7 @@ const About = () => {
 
       {/* Next Section, work exps */}
       <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience.</h3>
+        <h3 className='subhead-text'>Professional Experience.</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
           Through collaborations with diverse companies, I've continually enhanced my skills while collaborating with bright minds. 
@@ -76,7 +76,7 @@ const About = () => {
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
-                      className='w-[60%] h-[60%] object-contain'
+                      className='w-[80%] h-[80%] object-contain'
                     />
                   </div>
                 }

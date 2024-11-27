@@ -1,4 +1,4 @@
-import { ltimindtree, shijixinyuan, codemao } from "../assets/images";
+import { borealis, cynorix, ltimindtree, shijixinyuan, codemao } from "../assets/images";
 import {
     car,
     contact,
@@ -34,18 +34,25 @@ import {
     passport,
     numpy,
     tensorflow,
-    pytorch
+    pytorch,
+    c,
+    google_cloud,
+    k8s,
+    postgresql,
+    r,
+    opencv,
+    pandas,
 } from "../assets/icons";
 
 export const skills = [
     {
-        imageUrl: springboot,
-        name: "Spring Boot",
+        imageUrl: react,
+        name: "React",
         type: "Framework",
     },
     {
-        imageUrl: react,
-        name: "React",
+        imageUrl: springboot,
+        name: "Spring Boot",
         type: "Framework",
     },
     {
@@ -66,6 +73,16 @@ export const skills = [
     {
         imageUrl: docker,
         name: "Docker",
+        type: "Technical Tool",
+    },
+    {
+        imageUrl: k8s,
+        name: "Kubernetes",
+        type: "Technical Tool",
+    },
+    {
+        imageUrl: google_cloud,
+        name: "GCP",
         type: "Technical Tool",
     },
     {
@@ -99,6 +116,16 @@ export const skills = [
         type: "Machine Learning Related",
     },
     {
+        imageUrl: pytorch,
+        name: "PyTorch",
+        type: "Machine Learning Related",
+    },
+    {
+        imageUrl: opencv,
+        name: "OpenCV",
+        type: "Machine Learning Related",
+    },
+    {
         imageUrl: numpy,
         name: "numpy",
         type: "Machine Learning Related",
@@ -109,14 +136,9 @@ export const skills = [
         type: "Machine Learning Related",
     },
     {
-        imageUrl: pytorch,
-        name: "PyTorch",
+        imageUrl: pandas,
+        name: "Pandas",
         type: "Machine Learning Related",
-    },
-    {
-        imageUrl: java,
-        name: "Java",
-        type: "Language",
     },
     {
         imageUrl: python,
@@ -124,8 +146,18 @@ export const skills = [
         type: "Language",
     },
     {
+        imageUrl: c,
+        name: "C",
+        type: "Language",
+    },
+    {
         imageUrl: cpp,
         name: "C++",
+        type: "Language",
+    },
+    {
+        imageUrl: java,
+        name: "Java",
         type: "Language",
     },
     {
@@ -149,6 +181,11 @@ export const skills = [
         type: "Language",
     },
     {
+        imageUrl: r,
+        name: "R",
+        type: "Language",
+    },
+    {
         imageUrl: matlab,
         name: "Matlab",
         type: "Language",
@@ -156,6 +193,11 @@ export const skills = [
     {
         imageUrl: mysql,
         name: "MySQL",
+        type: "Database",
+    },
+    {
+        imageUrl: postgresql,
+        name: "PostgreSQL",
         type: "Database",
     },
     {
@@ -171,6 +213,33 @@ export const skills = [
 ];
 
 export const experiences = [
+    {
+        title: "AI Research Fellow",
+        company_name: "Borealis AI - Royal Bank of Canada",
+        icon: borealis,
+        iconBg: "#E1E8F0",
+        date: "Oct 2024 - Dec 2024",
+        points: [
+            "Collaborated with teams including McGill professors, Libraries and Archives at McGill University, the Bibliothèque Nationale du Quebec, and Borealis AI (RBC) to conduct a pioneering interdisciplinary study combining NLP and meteorology, leveraging expertise from diverse fields.",
+            "Processed and refined over 10GB of raw OCR-scanned historical text data by implementing LDA for classification and applying advanced techniques such as GPT-based filtering, Unicode normalization, and regex-based corrections to enhance data quality.",
+            "Labeled and annotated data subsets from the historical weather dataset, running multiple open and closed-source models (e.g., GPT, Gemini, Claude, LLaMA, Mixtral) to perform binary classification on weather-related vulnerabilities and resilience strategies, establishing a benchmark for historical weather research.",
+            "Drafted a benchmark paper based on findings to contribute to ACL (Association for Computational Linguistics), aiming to advance research in NLP applications for historical weather events and societal responses.",
+        ],
+    },
+    {
+        title: "Platform Engineer",
+        company_name: "University of Waterloo",
+        icon: cynorix,
+        iconBg: "#FFF9C4",
+        date: "Sept 2024 - Dec 2024",
+        points: [
+            "Developed dynamic React and React Native web applications, integrating with backend APIs powered by Express.",
+            "Established a comprehensive CI/CD pipeline on GCP, setting up Network Endpoint Groups, Load Balancers, and GKE workloads to streamline deployment. Ensured consistent performance and reliability across Dockerized environments.",
+            "Implemented and optimized news feed sorting algorithms using advanced techniques like Reciprocal Rank Fusion (RRF), enhancing data relevance and improving more than 50% of the original data on information-heavy interfaces.",
+            "Leveraged Jupyter to fine-tune Hugging Face models. Visualized and analyzed results from different fine-tuned models to refine the model outputs for enhanced media content classification with an 80% accuracy rate.",
+            "Used pandas to manage and label collected data, creating a pipeline to convert embeddings  and data from a PostgreSQL database on GKE into a self-designed neural network (NN) to classify scraped articles.",
+        ],
+    },
     {
         title: "Software Engineer",
         company_name: "LTIMindtree",

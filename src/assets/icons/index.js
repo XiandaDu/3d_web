@@ -17,7 +17,7 @@ import note from './note.svg'
 
 
 
-//Skills, 27 in total
+//Skills, 32 in total
 import express from './skills/express.svg'
 import css from './skills/css.svg'
 import git from './skills/git.svg'
@@ -45,8 +45,15 @@ import passport from './skills/passport.svg'
 import numpy from './skills/numpy.svg'
 import pytorch from './skills/pytorch.svg'
 import tensorflow from './skills/tensorflow.svg'
+import c from './skills/c.svg'
+import google_cloud from './skills/google-cloud.svg'
+import k8s from './skills/k8s.svg'
+import postgresql from './skills/postgresql.svg'
+import r from './skills/r-lang.svg'
+import pandas from './skills/pandas.svg'
+import opencv from './skills/opencv.svg'
 
-//31 exports
+//36 exports
 export {
     aws,
     matlab,
@@ -85,5 +92,12 @@ export {
     passport,
     numpy,
     tensorflow,
-    pytorch
+    pytorch,
+    c,
+    google_cloud,
+    k8s,
+    postgresql,
+    r,
+    pandas,
+    opencv,
 }
