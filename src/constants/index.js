@@ -337,6 +337,6 @@ export const projects = [
         name: 'Campus Management System',
         description: 'The Campus Management System, developed using Spring Boot, MyBatis, and MySQL, along with Vue.js for the frontend, offers an integrated platform for streamlining administrative tasks, student management and teacher management within educational institutions.',
         link: 'https://github.com/XiandaDu/Campus-Management-System',
-        demo: 'http://3.228.74.131:81'
+        demo: null
     },
 ];
