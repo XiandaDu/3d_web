@@ -80,7 +80,7 @@ const Intro = () => {
 
         {/* Use the vertical time line lib to create a time line of my past work exps */}
         <div className="mt-12 flex">
-          <VerticalTimeline>
+          <VerticalTimeline className="w-full">
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
                 key={experience.company_name}
@@ -99,7 +99,7 @@ const Intro = () => {
                   borderBottom: "8px",
                   borderStyle: "solid",
                   borderBottomColor: experience.iconBg,
-                  boxShadow: "none",
+                  boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
                 }}
               >
                 <div>
