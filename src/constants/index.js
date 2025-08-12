@@ -6,6 +6,7 @@ import {
   codemao,
   watai,
 } from "../assets/images";
+
 import {
   car,
   contact,
@@ -49,6 +50,13 @@ import {
   r,
   opencv,
   pandas,
+  mantine,
+  fastapi,
+  cloudflare,
+  nginx,
+  supabase,
+  snowflake,
+  ai,
 } from "../assets/icons";
 
 export const skills = [
@@ -57,11 +65,7 @@ export const skills = [
     name: "React",
     type: "Framework",
   },
-  {
-    imageUrl: springboot,
-    name: "Spring Boot",
-    type: "Framework",
-  },
+
   {
     imageUrl: vue,
     name: "Vue",
@@ -75,6 +79,16 @@ export const skills = [
   {
     imageUrl: nodejs,
     name: "NodeJs",
+    type: "Framework",
+  },
+  {
+    imageUrl: fastapi,
+    name: "FastAPI",
+    type: "Framework",
+  },
+  {
+    imageUrl: springboot,
+    name: "Spring Boot",
     type: "Framework",
   },
   {
@@ -98,8 +112,18 @@ export const skills = [
     type: "Technical Tool",
   },
   {
+    imageUrl: cloudflare,
+    name: "Cloudflare",
+    type: "Technical Tool",
+  },
+  {
     imageUrl: git,
     name: "Git",
+    type: "Technical Tool",
+  },
+  {
+    imageUrl: nginx,
+    name: "Nginx",
     type: "Technical Tool",
   },
   // {
@@ -115,6 +139,11 @@ export const skills = [
   {
     imageUrl: materialUI,
     name: "MaterialUI",
+    type: "Technical Tool",
+  },
+  {
+    imageUrl: mantine,
+    name: "Mantine",
     type: "Technical Tool",
   },
   {
@@ -145,6 +174,31 @@ export const skills = [
   {
     imageUrl: pandas,
     name: "Pandas",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "RAG",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "LightGBM",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "CNN",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "LSTM",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "HPO",
     type: "Machine Learning Related",
   },
   {
@@ -198,6 +252,11 @@ export const skills = [
     type: "Language",
   },
   {
+    imageUrl: supabase,
+    name: "Supabase",
+    type: "Database",
+  },
+  {
     imageUrl: mysql,
     name: "MySQL",
     type: "Database",
@@ -215,6 +274,11 @@ export const skills = [
   {
     imageUrl: mongodb,
     name: "MongoDB",
+    type: "Database",
+  },
+  {
+    imageUrl: snowflake,
+    name: "Snowflake",
     type: "Database",
   },
 ];
