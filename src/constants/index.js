@@ -4,6 +4,7 @@ import {
   ltimindtree,
   shijixinyuan,
   codemao,
+  watai,
 } from "../assets/images";
 import {
   car,
@@ -237,8 +238,8 @@ export const experiences = [
   {
     title: "WatAI RAG Project Technical Lead",
     company_name: "University of Waterloo, WatAI",
-    icon: cynorix,
-    iconBg: "#E3F2FD",
+    icon: watai,
+    iconBg: "#ffffff",
     date: "April 2025 - December 2025",
     points: [
       "Built a flexible <strong>LangChain</strong> layer that can switch between <strong>Qwen, OpenAI, and Gemini</strong>; supports <strong>streaming</strong> responses, <strong>custom prompts</strong>, per-user <strong>API keys</strong>, and simple guardrails (rate and token limits).",

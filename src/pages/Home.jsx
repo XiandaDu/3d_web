@@ -1,86 +1,150 @@
-import {Suspense, useState} from 'react'
-import { Canvas } from '@react-three/fiber'
-import Loader from '../components/Loader'
-import Island from '../models/Island'
-import Sky from '../models/Sky'
-import Plane from '../models/Plane'
-import HomeInfo from '../components/HomeInfo'
-import Dragon from '../models/Dragon'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { experiences, skills } from "../constants";
+import "react-vertical-timeline-component/style.min.css";
+import CTA from "../components/CTA";
 
-
-const Home = () => {
-  const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(1);
-
-  const adjustIslandForScreenSize = ()=>{
-    let screenScale = null;
-    let screenPosition = [0, -6.5, -75];
-    let rotation = [0.2, 0, 0];
-
-    if (window.innerWidth < 768){
-      screenScale = [0.9, 0.9, 0.9];
-    } else {
-      screenScale = [1, 1, 1];
-    }
-    return [screenScale, screenPosition, rotation];
-  }
-
-  const adjustPlaneForScreenSize = ()=>{
-    let screenScale, screenPosition;
-    let rotation = [0, 0, 0];
-
-    if (window.innerWidth < 768){
-      screenScale = [0.0007, 0.0007, 0.0007]; 
-      screenPosition = [0, -4, -2];
-    } else {
-      screenScale = [0.001, 0.001, 0.001];
-      screenPosition = [0, -4, -3];
-    }
-    return [screenScale, screenPosition, rotation];
-  }
-
-  const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
-  const [planeScale, planePosition, planeRotation] = adjustPlaneForScreenSize();
-
+const Introduction = () => {
   return (
-      <section className="w-full h-screen relative">
-        <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-          {currentStage && <HomeInfo currentStage = {currentStage}/>}
+    // welcome information
+    <section className="max-container">
+      <h1 className="head-text">
+        Hello, I'm{" "}
+        <span className="blue-gradient_text font-semibold drop-shadow">
+          {" "}
+          Xianda
+        </span>{" "}
+        👋
+      </h1>
+
+      {/* brief self-introduction */}
+      <div className="mt-5 flex flex-col gap-3 text-slate-500">
+        <p>
+          Step into my tech universe, where precision meets passion. With a
+          focus on practical solutions and streamlined development, I specialize
+          in creating efficient, effective solutions. Explore my skills and
+          discover the craftsmanship behind every project. Let's build something
+          remarkable together!
+        </p>
+      </div>
+
+      <div className="py-10 flex flex-col">
+        <h3 className="subhead-text">My Skills</h3>
+        {/*itrate through my skills, find different types*/}
+        <div>
+          {Array.from(new Set(skills.map((skill) => skill.type))).map(
+            (type) => (
+              <div className="mt-6" key={type}>
+                <h4 className="text-xl font-bold mb-4">{type}</h4>
+                {/*Based on the type, render the skills, so that skills are arranged in types, which is clearer */}
+                <div className="flex flex-wrap gap-12 mt-6">
+                  {skills
+                    .filter((skill) => skill.type === type)
+                    .map((skill) => (
+                      <div
+                        className="block-container w-20 h-20"
+                        key={skill.name}
+                      >
+                        <div className="btn-back rounded-xl" />
+                        <div className="btn-front rounded-xl flex flex-col justify-center items-center">
+                          <img
+                            src={skill.imageUrl}
+                            alt={skill.name}
+                            className="w-1/2 h-1/2 object-contain"
+                          />
+                          <div className="text-center text-sm">
+                            {skill.name}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+
+      {/* Next Section, work exps */}
+      <div className="py-16">
+        <h3 className="subhead-text">Professional Experience.</h3>
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            Through collaborations with diverse companies, I've continually
+            enhanced my skills while collaborating with bright minds. Here's a
+            glimpse into my journey:
+          </p>
         </div>
 
-        <Canvas className={`w-full h-screen bg-transparent
-          ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
-          camera={{near:0.1, far:1000}} //futher than 1000, do not render
-        >
-          <Suspense fallback={<Loader/>}>
-            <directionalLight position={[1,1,1]} intensity={2}/>
-            <ambientLight intensity={0.5}/>
-            {/* <pointLight/> outdoor, so don't need these two types of light */} 
-            {/* <spotLight/> cone light, no need for it either*/}
-            <hemisphereLight skyColor="#b1e1ff" groundColor='#000000' intensity={1}/>
+        {/* Use the vertical time line lib to create a time line of my past work exps */}
+        <div className="mt-12 flex">
+          <VerticalTimeline className="w-full">
+            {experiences.map((experience, index) => (
+              <VerticalTimelineElement
+                key={experience.company_name}
+                date={experience.date}
+                iconStyle={{ background: experience.iconBg }}
+                icon={
+                  <div className="flex justify-center items-center w-full h-full">
+                    <img
+                      src={experience.icon}
+                      alt={experience.company_name}
+                      className="w-[80%] h-[80%] object-contain"
+                    />
+                  </div>
+                }
+                contentStyle={{
+                  borderBottom: "8px",
+                  borderStyle: "solid",
+                  borderBottomColor: experience.iconBg,
+                  boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+                }}
+              >
+                <div>
+                  <a
+                    href={experience.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h3 className="text-black text-xl font-poppins font-semibold">
+                      {experience.title} {experience.link ? "🔗" : ""}
+                    </h3>
+                  </a>
+                  <p
+                    className="text-black-500 font-medium text-base"
+                    style={{ margin: 0 }}
+                  >
+                    {experience.company_name}
+                  </p>
+                </div>
 
-            <Plane
-              isRotating={isRotating}
-              scale={planeScale}
-              position={planePosition}
-              rotation={planeRotation}
-            />
-            <Dragon/>
-            <Sky
-              isRotating={isRotating}
-            />
-            <Island
-              position = {islandPosition}
-              scale = {islandScale}
-              rotation = {islandRotation}
-              isRotating = {isRotating}
-              setIsRotating = {setIsRotating}
-              setCurrentStage={setCurrentStage}
-            />
-          </Suspense>
-        </Canvas>
-      </section>
-  )
-}
+                <ul className="my-5 list-disc ml-5 space-y-2">
+                  {experience.points.map((point, idx) => (
+                    <li
+                      key={`experience-point-${idx}`}
+                      className="text-black-500 font-normal pl-1 text-sm"
+                    >
+                      {typeof point === "string" ? (
+                        <span dangerouslySetInnerHTML={{ __html: point }} />
+                      ) : (
+                        point
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
 
-export default Home
+      {/* In case someone wants to contact me from here, add a btn to jump to my contact */}
+      <hr className="border-slate-200" />
+      <CTA />
+    </section>
+  );
+};
+
+export default Introduction;
