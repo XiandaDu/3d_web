@@ -3,7 +3,7 @@ import { experiences, skills } from "../constants";
 import "react-vertical-timeline-component/style.min.css";
 import CTA from "../components/CTA";
 
-const About = () => {
+const Intro = () => {
   return (
     // welcome information
     <section className='max-container'>
@@ -19,9 +19,9 @@ const About = () => {
       {/* brief self-introduction */}
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-        Step into my tech universe, where precision meets passion. With a focus on practical solutions and streamlined development, 
-        I specialize in creating efficient, effective solutions. Explore my skills and discover the craftsmanship behind every project. 
-        Let's build something remarkable together!
+          Step into my tech universe, where precision meets passion. With a focus on practical solutions and streamlined development,
+          I specialize in creating efficient, effective solutions. Explore my skills and discover the craftsmanship behind every project.
+          Let's build something remarkable together!
         </p>
       </div>
 
@@ -58,8 +58,8 @@ const About = () => {
         <h3 className='subhead-text'>Professional Experience.</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-          Through collaborations with diverse companies, I've continually enhanced my skills while collaborating with bright minds. 
-          Here's a glimpse into my journey:
+            Through collaborations with diverse companies, I've continually enhanced my skills while collaborating with bright minds.
+            Here's a glimpse into my journey:
           </p>
         </div>
 
@@ -117,9 +117,9 @@ const About = () => {
 
       {/* In case someone wants to contact me from here, add a btn to jump to my contact */}
       <hr className='border-slate-200' />
-      <CTA/>
+      <CTA />
     </section>
   );
 };
 
-export default About;
+export default Intro;
