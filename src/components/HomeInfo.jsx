@@ -22,7 +22,7 @@ const renderContent = {
   2: (
     <InfoBox
       text="For web development, I am familiar with React, Spring Boot and Vue. Also I am into AIs. Here are my detailed skills and past work experiences"
-      link="/introduction"
+      link="/"
       btnText="learn more"
     />
   ),

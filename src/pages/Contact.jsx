@@ -6,6 +6,7 @@ import Fox from "../models/Fox";
 import Loader from "../components/Loader.jsx";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
+import { socialLinks } from "../constants";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -79,6 +80,47 @@ const Contact = () => {
 
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text"> Get in Touch with me </h1>
+
+        {/* Social Links Section */}
+        <div className="mt-6 flex gap-4">
+          {socialLinks
+            .filter((link) => link.name !== "Contact") // Exclude the Contact link since we're already on the contact page
+            .map((link) => {
+              // Define different color schemes for each platform
+              const getButtonStyle = (platformName) => {
+                switch (platformName) {
+                  case "GitHub":
+                    return "bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-400";
+                  case "LinkedIn":
+                    return "bg-white hover:bg-gray-100 text-blue-600 border-2 border-blue-300 hover:border-blue-400";
+                  default:
+                    return "bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-400";
+                }
+              };
+
+              return (
+                <a
+                  key={link.name}
+                  href={link.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${getButtonStyle(
+                    link.name
+                  )}`}
+                  onFocus={handleFocus}
+                  onBlur={handleBlur}
+                >
+                  <img
+                    src={link.iconUrl}
+                    alt={link.name}
+                    className="w-5 h-5 object-contain"
+                  />
+                  <span className="font-medium">{link.name}</span>
+                </a>
+              );
+            })}
+        </div>
+
         <form
           ref={formRef}
           className="w-full flex flex-col gap-7 mt-14"
