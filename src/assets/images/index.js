@@ -5,5 +5,17 @@ import ltimindtree from "./ltimindtree.png";
 import codemao from "./codemao.jpg";
 import shijixinyuan from "./shijixinyuan.jpg";
 import watai from "./watai.png";
+import mcgill from "./mcgill.png";
+import storytellers from "./storytellers.svg";
 
-export { logo, borealis, cynorix, ltimindtree, codemao, shijixinyuan, watai };
+export {
+  logo,
+  borealis,
+  cynorix,
+  ltimindtree,
+  codemao,
+  shijixinyuan,
+  watai,
+  mcgill,
+  storytellers,
+};

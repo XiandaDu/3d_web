@@ -5,6 +5,8 @@ import {
   shijixinyuan,
   codemao,
   watai,
+  mcgill,
+  storytellers,
 } from "../assets/images";
 
 import {
@@ -286,30 +288,64 @@ export const skills = [
 export const experiences = [
   {
     title: "Research Assistant",
-    link: "https://aclanthology.org/2025.findings-acl.207.pdf",
-    company_name: "RBC Borealis AI X McGill University",
-    icon: borealis,
-    iconBg: "#E1E8F0",
-    date: "Oct 2024 - Dec 2024",
+    company_name: "McGill University",
+    icon: mcgill,
+    iconBg: "#FFF0F5",
+    date: "June 2025 - Oct 2025",
+    tags: ["Research", "AI", "RAG"],
     points: [
-      "Co-authored <strong>WXImpactBench (ACL 2025)</strong>, the first benchmark for LLMs' understanding of historical disruptive weather impacts, combining NLP and meteorology.",
-      "Processed <strong>53K+ OCR-scanned articles</strong> with GPT-4o post-OCR correction, LDA topic modeling, and expert curation; annotated <strong>1.7K samples</strong> across six societal impact categories.",
-      "Designed <strong>multi-label classification</strong> and <strong>ranking-based QA</strong> tasks; benchmarked 12 LLMs (GPT, DeepSeek, LLaMA, Mistral, Qwen, Gemma) with metrics including F1, row-wise accuracy, Hit@1, and nDCG@5.",
-      "Developed the <strong>ranking-based QA evaluation</strong> using GPT-4o for pseudo-question generation and a <strong>sliding window re-ranking pipeline</strong> implemented in <strong>Python, HuggingFace Transformers, and NumPy/pandas</strong>.",
-      "Developing a RAG study (ICLR-targeted) creating a climate-domain benchmark to assess <strong>retriever accuracy, climate adaptation, and generation quality</strong> for improving LLM reliability in domain specific tasks.",
+      "Established a reproducible <strong>Climate Domain RAG Benchmark</strong> & evaluation pipeline for <strong>climate and disaster analysis</strong>, quantifying retrieval and generation reliability of LLMs.",
+      "Designed a structured dataset of <strong>news-driven query</strong>, <strong>golden chunk</strong>, and <strong>ground truth answer</strong> triples for controlled evaluation.",
+      "Introduced novel <strong>climate vulnerability</strong> (exposure, sensitivity, adaptability) and <strong>resilience</strong> (temporal, functional, spatial) metrics to separate <strong>retrieval</strong> vs. <strong>understanding</strong> contributions in generation evaluation.",
+      "Implemented diverse <strong>chunking strategies</strong>, multiple <strong>retrieval methods</strong>, a <strong>Synthetic Chunk</strong> generator, and a <strong>climate domain adaptation</strong> module.",
+      "Evaluated with retrieval metrics (<strong>nDCG, Recall@k, MRR@k</strong>) and generation metrics (<strong>Exact Match, Accuracy, Rouge-L, BLEU</strong>) for end-to-end RAG performance assessment.",
+    ],
+  },
+  {
+    title: "Software / Machine Learning Engineering",
+    company_name: "Storytellers.ai",
+    icon: storytellers,
+    iconBg: "#F0FFFF",
+    date: "June 2025 - August 2025",
+    tags: ["Frontend", "Backend", "Full-Stack"],
+    points: [
+      "Diagnosed and resolved complex <strong>frontend</strong>/<strong>backend</strong> issues in large-scale <strong>data analytics</strong> software, improving <strong>data accuracy</strong>, <strong>UI responsiveness</strong>, and overall stability.",
+      "Designed and built new <strong>data quality management</strong> features, including <strong>dynamic filtering</strong> tools, <strong>interactive tables</strong>, and <strong>advanced tooltips</strong>—optimizing <strong>SQL</strong> queries and reducing load times by up to <strong>15%</strong>.",
+      "Integrated <strong>Snowflake</strong> data warehouse by implementing a secure <strong>OAuth</strong> authentication flow, automated permission checks, and metadata retrieval via <strong>REST APIs</strong>.",
+      "Developed an <strong>AI-powered</strong> automated documentation system using <strong>Cloudflare Workers AI</strong> and <strong>Durable Objects</strong> to generate high-quality table descriptions from schema and statistical metadata.",
+      "Built a collaborative <strong>in-app documentation</strong> tool allowing users to add, edit, and share contextual notes on datasets and data fields, with efficient on-demand loading and caching.",
+      "Enhanced analytics capabilities by engineering a <strong>historical data aggregation</strong> feature for judicial datasets, enabling performance analysis across categories without impacting database performance.",
+      "Refactored <strong>cloud authentication</strong> workflows to replace static service account keys with secure <strong>GCP impersonation</strong>, strengthening platform security and reducing operational risk.",
     ],
   },
   {
     title: "WatAI RAG Project Technical Lead",
     company_name: "University of Waterloo, WatAI",
     icon: watai,
-    iconBg: "#ffffff",
+    iconBg: "#FFDEAD",
     date: "April 2025 - December 2025",
+    tags: ["AI", "Backend", "Frontend", "Full-Stack", "RAG", "DevOps"],
     points: [
       "Built a flexible <strong>LangChain</strong> layer that can switch between <strong>Qwen, OpenAI, and Gemini</strong>; supports <strong>streaming</strong> responses, <strong>custom prompts</strong>, per-user <strong>API keys</strong>, and simple guardrails (rate and token limits).",
       "Delivered a production <strong>RAG</strong> flow: ingest & chunk course PDFs/slides, embed and store in a <strong>Supabase</strong>, retrieve top passages (optional <strong>hybrid</strong> dense+BM25), <strong>re-rank</strong>, and answer with grounded <strong>citations</strong>.",
       "Added <strong>agent</strong> tools (retrieval, file parsing, syllabus/FAQ lookup) and a router that picks the best model by <strong>speed, cost, and capability</strong>; included timeouts, retries, and safe <strong>fallbacks</strong>.",
       "Set up <strong>evaluation & monitoring</strong>: retrieval metrics (<strong>Recall@k, nDCG</strong>), <strong>LLM-as-judge</strong> faithfulness checks, and run tracing (model, prompt version, retriever settings) to tune RAG with real chats.",
+    ],
+  },
+  {
+    title: "Research Assistant",
+    link: "https://aclanthology.org/2025.findings-acl.207.pdf",
+    company_name: "RBC Borealis AI X McGill University",
+    icon: borealis,
+    iconBg: "#E1E8F0",
+    date: "Oct 2024 - Dec 2024",
+    tags: ["RAG", "Research", "AI"],
+    points: [
+      "Co-authored <strong>WXImpactBench (ACL 2025)</strong>, the first benchmark for LLMs' understanding of historical disruptive weather impacts, combining NLP and meteorology.",
+      "Processed <strong>53K+ OCR-scanned articles</strong> with GPT-4o post-OCR correction, LDA topic modeling, and expert curation; annotated <strong>1.7K samples</strong> across six societal impact categories.",
+      "Designed <strong>multi-label classification</strong> and <strong>ranking-based QA</strong> tasks; benchmarked 12 LLMs (GPT, DeepSeek, LLaMA, Mistral, Qwen, Gemma) with metrics including F1, row-wise accuracy, Hit@1, and nDCG@5.",
+      "Developed the <strong>ranking-based QA evaluation</strong> using GPT-4o for pseudo-question generation and a <strong>sliding window re-ranking pipeline</strong> implemented in <strong>Python, HuggingFace Transformers, and NumPy/pandas</strong>.",
+      "Developing(Follow-up Research: Oct 2025) a RAG study (ICLR-targeted) creating a climate-domain benchmark to assess <strong>retriever accuracy, climate adaptation, and generation quality</strong> for improving LLM reliability in domain specific tasks.",
     ],
   },
   {
@@ -319,6 +355,7 @@ export const experiences = [
     icon: cynorix,
     iconBg: "#FFF9C4",
     date: "Sept 2024 - Dec 2024",
+    tags: ["Frontend", "Backend", "AI", "DevOps", "Full-Stack"],
     points: [
       "Developed dynamic <strong>React and React Native</strong> web applications, integrating with backend APIs powered by <strong>Express</strong>.",
       "Established a comprehensive <strong>CI/CD pipeline on GCP</strong>, setting up <strong>Network Endpoint Groups, Load Balancers, and GKE</strong> workloads to streamline deployment. Ensured consistent performance and reliability across <strong>Dockerized</strong> environments.",
@@ -333,6 +370,7 @@ export const experiences = [
     icon: ltimindtree,
     iconBg: "#accbe1",
     date: "Jan 2024 - April 2024",
+    tags: ["Backend"],
     points: [
       "Played a pivotal role in the development, test and deployment of some crucial internal APIs. Achieved seamless data transformation and system integration using <strong>Spring, OAuth2, and Jazz</strong>.",
       "Diligently debugged complex codebases of large-scale projects, collaborating effectively with cross-functional teams and utilizing skills in database management using <strong>SQL and JDBC</strong>.",
@@ -346,6 +384,7 @@ export const experiences = [
     icon: codemao,
     iconBg: "#fbc3bc",
     date: "May 2023 - Aug 2023",
+    tags: ["Backend", "AI"],
     points: [
       "Developed a company bot to test natural language processing AIs using <strong>Spring Boot</strong>.",
       "Utilized <strong>OkHttp, Retrofit2, Postman and Jackson</strong> to connect the APIs of natural language AI into the company bot for my colleagues to use and test.",
@@ -359,6 +398,7 @@ export const experiences = [
     icon: shijixinyuan,
     iconBg: "#b7e4c7",
     date: "Jun 2022 - Aug 2022",
+    tags: ["Frontend"],
     points: [
       "Applied <strong>Vue.js, Vue Router, JavaScript, and CSS</strong> to create and improve the company's website with more customized color and layout.",
       "Used <strong>Ajax</strong> to send asynchronous HTTP requests, interact with the backend for data, and update and render the page based on the returned results.",
