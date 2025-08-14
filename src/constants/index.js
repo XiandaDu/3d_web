@@ -12,6 +12,7 @@ import {
 import {
   car,
   contact,
+  resume,
   css,
   digit,
   note,
@@ -422,6 +423,11 @@ export const socialLinks = [
     name: "LinkedIn",
     iconUrl: linkedin,
     link: "https://ca.linkedin.com/in/xianda",
+  },
+  {
+    name: "Resume",
+    iconUrl: resume,
+    link: "/resume",
   },
 ];
 

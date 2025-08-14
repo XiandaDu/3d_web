@@ -9,6 +9,7 @@ import arrow from "./arrow.svg";
 import contact from "./contact.svg";
 import motion from "./motion.svg";
 import note from "./note.svg";
+import resume from "./resume.svg";
 
 //Skills, 32 in total
 import express from "./skills/express.svg";
@@ -107,4 +108,5 @@ export {
   supabase,
   snowflake,
   ai,
+  resume,
 };

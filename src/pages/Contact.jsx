@@ -93,6 +93,8 @@ const Contact = () => {
                     return "bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-400";
                   case "LinkedIn":
                     return "bg-white hover:bg-gray-100 text-blue-600 border-2 border-blue-300 hover:border-blue-400";
+                  case "Resume":
+                    return "bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-400";
                   default:
                     return "bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-400";
                 }
