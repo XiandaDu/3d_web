@@ -10,6 +10,7 @@ import contact from "./contact.svg";
 import motion from "./motion.svg";
 import note from "./note.svg";
 import resume from "./resume.svg";
+import wallet from "./wallet.svg";
 
 //Skills, 32 in total
 import express from "./skills/express.svg";
@@ -54,7 +55,7 @@ import supabase from "./skills/supabase.svg";
 import snowflake from "./skills/snowflake.svg";
 import ai from "./skills/ai.svg";
 
-//36 exports
+//38 exports
 export {
   aws,
   matlab,
@@ -109,4 +110,5 @@ export {
   snowflake,
   ai,
   resume,
+  wallet,
 };

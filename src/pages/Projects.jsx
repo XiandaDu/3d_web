@@ -1,9 +1,36 @@
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import CTA from "../components/CTA";
 import { projects } from "../constants";
 import { arrow } from "../assets/icons";
+import CTA from "../components/CTA";
+import TagSelector from "../components/TagSelector";
 
 const Projects = () => {
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  // Get all unique tags from projects
+  const availableTags = useMemo(() => {
+    const tags = new Set();
+    projects.forEach((project) => {
+      project.tags.forEach((tag) => tags.add(tag));
+    });
+    return Array.from(tags).sort();
+  }, []);
+
+  // Filter projects based on selected tags
+  const filteredProjects = useMemo(() => {
+    if (selectedTags.length === 0) {
+      return projects;
+    }
+    return projects.filter((project) =>
+      project.tags.some((tag) => selectedTags.includes(tag))
+    );
+  }, [selectedTags]);
+
+  const handleTagChange = (newTags) => {
+    setSelectedTags(newTags);
+  };
+
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -24,8 +51,15 @@ const Projects = () => {
         continual improvement and evolution.
       </p>
 
+      {/* Tag Selector */}
+      <TagSelector
+        selectedTags={selectedTags}
+        onTagChange={handleTagChange}
+        availableTags={availableTags}
+      />
+
       <div className="flex flex-wrap my-20 gap-16">
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <div className="lg:w-[400px] w-full" key={project.name}>
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl ${project.theme}`} />
@@ -42,7 +76,24 @@ const Projects = () => {
               <h4 className="text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p className="mt-2 text-slate-500">{project.description}</p>
+
+              {/* Tags display */}
+              <div className="flex flex-wrap gap-2 mt-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-2 text-slate-500">
+                <span
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
+              </p>
 
               <div>
                 <div className="mt-5 flex items-center gap-2 font-poppins">
