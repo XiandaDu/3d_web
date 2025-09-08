@@ -428,7 +428,7 @@ export const socialLinks = [
   {
     name: "Resume",
     iconUrl: resume,
-    link: "/resume",
+    link: "/resume.pdf",
   },
 ];
 
