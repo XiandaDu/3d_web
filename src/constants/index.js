@@ -437,15 +437,17 @@ export const projects = [
     iconUrl: wallet,
     theme: "btn-back-green",
     name: "Web 3.0 Quantitative Trading Challenge",
-    tags: [
-      "LightGBM",
-      "XGBoost",
-      "TabNet",
-      "Python",
-      "HPO",
-      "Ensemble Learning",
-      "Kaggle",
-    ],
+    tags: {
+      "AI/ML": [
+        "LightGBM",
+        "XGBoost",
+        "TabNet",
+        "HPO",
+        "Ensemble Learning",
+        "Kaggle",
+        "Python",
+      ],
+    },
     description:
       "Built a high-performance <strong>ML framework</strong> for financial time series in a Kaggle-based crypto trading competition, achieving >0.57 Weighted Spearman Rank Correlation. Engineered advanced features (RSI divergence, volatility measures), applied two-stage <strong>feature selection</strong>, and developed an <strong>8-model ensemble</strong> with adaptive post-processing (clipping, winsorization, normalization, smoothing) to ensure stable rankings.",
     link: "https://github.com/XiandaDu/HKU-Web3-Quant",
@@ -455,7 +457,10 @@ export const projects = [
     iconUrl: videoplayer,
     theme: "btn-back-red",
     name: "ViewTube",
-    tags: ["React", "Node", "Vercel", "JavaScript", "MaterialUI"],
+    tags: {
+      Frontend: ["React", "MaterialUI", "JavaScript", "Node"],
+      "DevOps/Cloud": ["Vercel"],
+    },
     description:
       "This project is a dynamic video-playing platform that showcases my expertise in web development. With a sleek interface powered by <strong>React.js</strong>, <strong>MaterialUI</strong>, <strong>axios</strong> and <strong>RapidAPI</strong>, it offers seamless video playback, real-time recommendations, and data synchronization in channel or video statistics.",
     link: "https://github.com/XiandaDu/ViewTube",
@@ -465,7 +470,11 @@ export const projects = [
     iconUrl: note,
     theme: "btn-back-black",
     name: "Note-App",
-    tags: ["Passport.js", "MongoDB", "Express", "EJS", "JavaScript"],
+    tags: {
+      Frontend: ["EJS", "Passport.js", "JavaScript"],
+      Backend: ["Express"],
+      Database: ["MongoDB"],
+    },
     description:
       "This is a note-taking application that seamlessly integrates with Google login for user authentication via <strong>Passport.js</strong>. This project crafted <strong>MongoDB</strong> for data storage and <strong>Mongoose</strong> for ORM. Also, leveraging the fusion of <strong>Express.js</strong> and <strong>EJS</strong>, it delivers a user-friendly interface.",
     link: "https://github.com/XiandaDu/Note-App",
@@ -475,7 +484,11 @@ export const projects = [
     iconUrl: digit,
     theme: "btn-back-blue",
     name: "Digit Recognition",
-    tags: ["AI", "ML", "Python", "TensorFlow", "React", "Vercel"],
+    tags: {
+      "AI/ML": ["TensorFlow", "Python"],
+      Frontend: ["React", "JavaScript"],
+      "DevOps/Cloud": ["Vercel"],
+    },
     description:
       "This is a digit recognition project, powered by <strong>Python</strong>, <strong>TensorFlow</strong>, and <strong>Jupyter Notebook</strong> for model training and evaluation, coupled with <strong>React.js</strong> for the frontend deployed on Vercel, enables the accurate identification of handwritten digits.",
     link: "https://github.com/XiandaDu/Digit-Recognition",
@@ -485,7 +498,10 @@ export const projects = [
     iconUrl: snapgram,
     theme: "btn-back-pink",
     name: "Real Time Chat",
-    tags: ["Spring Boot", "Websocket", "JavaScript"],
+    tags: {
+      Backend: ["Spring Boot", "Websocket"],
+      Frontend: ["JavaScript"],
+    },
     description:
       "Real-time chat application, crafted using <strong>Vue.js</strong> for the frontend, <strong>Spring Boot</strong> for the backend, and <strong>Websocket</strong> technology facilitated by socket.js, fosters real-time communication allowing users to exchange messages instantaneously in a dynamic and interactive environment.",
     link: "https://github.com/XiandaDu/Real-Time-Chat",
@@ -495,7 +511,12 @@ export const projects = [
     iconUrl: school,
     theme: "btn-back-green",
     name: "Campus Management System",
-    tags: ["AWS", "Spring Boot", "MyBatis", "MySQL", "Vue.js", "JavaScript"],
+    tags: {
+      "DevOps/Cloud": ["AWS"],
+      Backend: ["Spring Boot", "MyBatis"],
+      Database: ["MySQL"],
+      Frontend: ["Vue.js", "JavaScript"],
+    },
     description:
       "The Campus Management System, developed using <strong>Spring Boot</strong>, <strong>MyBatis</strong>, and <strong>MySQL</strong>, along with <strong>Vue.js</strong> for the frontend, offers an integrated platform for streamlining administrative tasks, student management and teacher management within educational institutions.",
     link: "https://github.com/XiandaDu/Campus-Management-System",

@@ -16,12 +16,14 @@ const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, I am Xianda Du 👋
-      <br />a Computer Engineering student from the University of Waterloo
+      <br />a 3B Computer Engineering student in the University of Waterloo
+      <br />
+      GPA 4.0, AI Option + Quantum Engineering Specialization
     </h1>
   ),
   2: (
     <InfoBox
-      text="For web development, I am familiar with React, Spring Boot and Vue. Also I am into AIs. Here are my detailed skills and past work experiences"
+      text="I am very into AIs (Especially RAG). For web development, I am proficient in React related fullstack development. Here are my detailed skills and past work experiences"
       link="/"
       btnText="learn more"
     />

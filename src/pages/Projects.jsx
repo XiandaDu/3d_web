@@ -8,23 +8,43 @@ import TagSelector from "../components/TagSelector";
 const Projects = () => {
   const [selectedTags, setSelectedTags] = useState([]);
 
-  // Get all unique tags from projects
-  const availableTags = useMemo(() => {
-    const tags = new Set();
+  // Build available tags grouped by category from the projects data
+  const availableTagsByCategory = useMemo(() => {
+    const categoryToTagsMap = new Map();
+
     projects.forEach((project) => {
-      project.tags.forEach((tag) => tags.add(tag));
+      const projectTagsByCategory = project.tags || {};
+      Object.entries(projectTagsByCategory).forEach(([category, tags]) => {
+        if (!categoryToTagsMap.has(category)) {
+          categoryToTagsMap.set(category, new Set());
+        }
+        const bucket = categoryToTagsMap.get(category);
+        tags.forEach((tag) => bucket.add(tag));
+      });
     });
-    return Array.from(tags).sort();
+
+    // Convert Set buckets to sorted arrays
+    const result = {};
+    categoryToTagsMap.forEach((value, key) => {
+      result[key] = Array.from(value).sort();
+    });
+    return result;
   }, []);
 
-  // Filter projects based on selected tags
+  // Flattened list for convenience in some consumers
+  const availableTags = useMemo(() => {
+    return Object.values(availableTagsByCategory).flat().sort();
+  }, [availableTagsByCategory]);
+
+  // Filter projects based on selected tags (match ANY tag)
   const filteredProjects = useMemo(() => {
     if (selectedTags.length === 0) {
       return projects;
     }
-    return projects.filter((project) =>
-      project.tags.some((tag) => selectedTags.includes(tag))
-    );
+    return projects.filter((project) => {
+      const projectAllTags = Object.values(project.tags || {}).flat();
+      return projectAllTags.some((tag) => selectedTags.includes(tag));
+    });
   }, [selectedTags]);
 
   const handleTagChange = (newTags) => {
@@ -56,6 +76,7 @@ const Projects = () => {
         selectedTags={selectedTags}
         onTagChange={handleTagChange}
         availableTags={availableTags}
+        availableTagsByCategory={availableTagsByCategory}
       />
 
       <div className="flex flex-wrap my-20 gap-16">
@@ -77,15 +98,25 @@ const Projects = () => {
                 {project.name}
               </h4>
 
-              {/* Tags display */}
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+              {/* Tags display grouped by category */}
+              <div className="flex flex-col gap-2 mt-2">
+                {Object.entries(project.tags || {}).map(([category, tags]) => (
+                  <div
+                    key={category}
+                    className="flex flex-wrap items-center gap-2"
                   >
-                    {tag}
-                  </span>
+                    <span className="text-[10px] uppercase tracking-wide text-slate-400 mr-1">
+                      {category}
+                    </span>
+                    {tags.map((tag) => (
+                      <span
+                        key={`${category}-${tag}`}
+                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 ))}
               </div>
 
