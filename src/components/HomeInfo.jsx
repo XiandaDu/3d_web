@@ -16,14 +16,14 @@ const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, I am Xianda Du 👋
-      <br />a 3B Computer Engineering student in the University of Waterloo
+      <br />a Computer Engineering student at the University of Waterloo
       <br />
-      GPA 4.0, AI Option + Quantum Engineering Specialization
+      CGPA 4.0/4.0, Option in Artificial Intelligence
     </h1>
   ),
   2: (
     <InfoBox
-      text="I am very into AIs (Especially RAG). For web development, I am proficient in React related fullstack development. Here are my detailed skills and past work experiences"
+      text="Passionate about AI research (NLP, RAG) with an ACL 2025 publication. Proficient in React fullstack development. Here are my detailed skills and past work experiences"
       link="/"
       btnText="learn more"
     />

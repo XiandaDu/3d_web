@@ -36,6 +36,14 @@ const Navbar = () => {
         >
           Contact
         </NavLink>
+        <a
+          href="https://cv.allendu.me"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black hover:text-blue-500"
+        >
+          CV
+        </a>
       </nav>
     </header>
   );
