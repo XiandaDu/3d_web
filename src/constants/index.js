@@ -356,6 +356,19 @@ export const experiences = [
     ],
   },
   {
+    title: "Research Assistant - LLM Reranking (RankLLM)",
+    link: "https://github.com/castorini/rank_llm",
+    company_name: "University of Waterloo (Prof. Jimmy Lin)",
+    icon: uwaterloo,
+    iconBg: "#FFF8DC",
+    date: "June 2026 - Present",
+    tags: ["Research", "AI", "Information Retrieval"],
+    points: [
+      "Contributing to <strong>RankLLM</strong>, Castorini's open-source toolkit for <strong>LLM-based listwise reranking</strong>: integrated <strong>SPLADE-v3</strong> learned sparse retrieval as a first-stage retriever and upgraded the <strong>Pyserini</strong> backend to v2.4.0.",
+      "Improved reranking reproducibility by enforcing deterministic decoding, and wrote a Colab CLI onboarding guide covering installation, sanity checks, and end-to-end <strong>RankZephyr</strong> reranking.",
+    ],
+  },
+  {
     title: "Machine Learning Engineer",
     company_name: "StackAdapt",
     icon: stackadapt,
