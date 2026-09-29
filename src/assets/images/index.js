@@ -7,6 +7,10 @@ import shijixinyuan from "./shijixinyuan.jpg";
 import watai from "./watai.png";
 import mcgill from "./mcgill.png";
 import storytellers from "./storytellers.svg";
+import waabi from "./waabi.png";
+import stackadapt from "./stackadapt.svg";
+import uwaterloo from "./uwaterloo.svg";
+import udem from "./udem.svg";
 
 export {
   logo,
@@ -18,4 +22,8 @@ export {
   watai,
   mcgill,
   storytellers,
+  waabi,
+  stackadapt,
+  uwaterloo,
+  udem,
 };

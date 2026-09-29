@@ -23,7 +23,7 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="Passionate about AI research (NLP, RAG) with an ACL 2025 publication. Proficient in React fullstack development. Here are my detailed skills and past work experiences"
+      text="AI researcher in search agents, VLM evaluation and generative models (ACL, SIGIR, NeurIPS workshop), now an Autonomy intern at Waabi. Here are my skills and experiences"
       link="/"
       btnText="learn more"
     />

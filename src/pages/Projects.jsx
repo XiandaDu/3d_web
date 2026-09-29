@@ -61,14 +61,13 @@ const Projects = () => {
       </h1>
 
       <p className="text-slate-500 mt-2 leading-relaxed">
-        During my tenure as a sophomore Computer Engineering student at the
-        University of Waterloo, I've engaged in a spectrum of tech projects,
-        encompassing web development with React, Machine Learning and Spring.
-        These projects represent my passion for technology and innovation.
-        Notably, all of these initiatives are open-source, reflecting my belief
-        in collaborative learning and knowledge sharing. I invite you to explore
-        these projects, as your insights and feedback are invaluable for their
-        continual improvement and evolution.
+        As a Computer Engineering student at the University of Waterloo, I've
+        built a spectrum of projects, from open-source research code for my
+        papers (retrieval benchmarks and generative priors) to machine learning
+        competitions and full-stack web applications with React and Spring. All
+        of these are open-source, reflecting my belief in collaborative learning
+        and knowledge sharing. Feel free to explore them, and your feedback is
+        always welcome.
       </p>
 
       {/* Tag Selector */}
@@ -150,7 +149,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="font-semibold text-blue-600"
                     >
-                      Live Demo Link
+                      {project.demoLabel || "Live Demo Link"}
                     </Link>
                   )}
                   {project.demo && (

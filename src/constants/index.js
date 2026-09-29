@@ -1,5 +1,4 @@
 import {
-  borealis,
   cynorix,
   ltimindtree,
   shijixinyuan,
@@ -7,6 +6,10 @@ import {
   watai,
   mcgill,
   storytellers,
+  waabi,
+  stackadapt,
+  uwaterloo,
+  udem,
 } from "../assets/images";
 
 import {
@@ -206,6 +209,31 @@ export const skills = [
     type: "Machine Learning Related",
   },
   {
+    imageUrl: ai,
+    name: "Transformers",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "DeepSpeed",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "JAX",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "VLMs",
+    type: "Machine Learning Related",
+  },
+  {
+    imageUrl: ai,
+    name: "RL (GRPO)",
+    type: "Machine Learning Related",
+  },
+  {
     imageUrl: python,
     name: "Python",
     type: "Language",
@@ -289,18 +317,70 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "Research Assistant",
-    company_name: "McGill University",
-    icon: mcgill,
-    iconBg: "#FFF0F5",
-    date: "June 2025 - Oct 2025",
-    tags: ["Research", "AI", "RAG"],
+    title: "Autonomy and Algorithm Engineer Intern",
+    company_name: "Waabi",
+    icon: waabi,
+    iconBg: "#222222",
+    date: "Sept 2026 - Dec 2026",
+    tags: ["AI", "Computer Vision"],
     points: [
-      "Established a reproducible <strong>Climate Domain RAG Benchmark</strong> & evaluation pipeline for <strong>climate and disaster analysis</strong>, quantifying retrieval and generation reliability of LLMs.",
-      "Designed a structured dataset of <strong>news-driven query</strong>, <strong>golden chunk</strong>, and <strong>ground truth answer</strong> triples for controlled evaluation.",
-      "Introduced novel <strong>climate vulnerability</strong> (exposure, sensitivity, adaptability) and <strong>resilience</strong> (temporal, functional, spatial) metrics to separate <strong>retrieval</strong> vs. <strong>understanding</strong> contributions in generation evaluation.",
-      "Implemented diverse <strong>chunking strategies</strong>, multiple <strong>retrieval methods</strong>, a <strong>Synthetic Chunk</strong> generator, and a <strong>climate domain adaptation</strong> module.",
-      "Evaluated with retrieval metrics (<strong>nDCG, Recall@k, MRR@k</strong>) and generation metrics (<strong>Exact Match, Accuracy, Rouge-L, BLEU</strong>) for end-to-end RAG performance assessment.",
+      "Working on <strong>novel view synthesis (NVS) quality evaluation</strong> for sensor-simulation reconstruction models in self-driving, an exploratory effort to design metrics and pipelines that assess rendering fidelity at novel viewpoints.",
+    ],
+  },
+  {
+    title: "Research Assistant - Controllable Generative Priors",
+    link: "https://github.com/Abdelaal495/controllable-image-generation",
+    company_name: "University of Waterloo (Prof. Amir-Hossein Karimi)",
+    icon: uwaterloo,
+    iconBg: "#FFF8DC",
+    date: "Aug 2026 - Present",
+    tags: ["Research", "AI", "Generative Models"],
+    points: [
+      "Formulated pretrained <strong>MeanFlow</strong> finite-interval transport maps as <strong>controllable priors</strong> for training-free inverse problems, running existing flow solvers (<strong>D-Flow, PnP-Flow, MPC-Flow</strong>) without retraining.",
+      "Introduced <strong>Receding-Horizon State Optimization (RHSO)</strong>; best in <strong>35 of 60</strong> task-metric cells and <strong>200 of 240</strong> pairwise comparisons across 5 ImageNet restoration tasks, 4 solvers, and 4 priors.",
+      "Built a unified benchmark over pixel- and latent-space priors (<strong>JiT, pMF, SiT-XL, iMF</strong>) spanning <strong>PyTorch</strong> and <strong>JAX</strong>, with sharded <strong>SLURM</strong> sweeps on Alliance clusters.",
+      "Published at the <strong>NeurIPS 2026 Workshop BeNTo</strong>; full version under review at <strong>ICLR 2027</strong>.",
+    ],
+  },
+  {
+    title: "Research Assistant - Evidence-Grounded Search Agents",
+    company_name: "Université de Montréal (Prof. Jian-Yun Nie)",
+    icon: udem,
+    iconBg: "#E0F2FE",
+    date: "July 2026 - Sept 2026",
+    tags: ["Research", "AI", "Information Retrieval"],
+    points: [
+      "Co-first authored <strong>Evidence-in-the-Loop</strong> (under review at <strong>ICLR 2027</strong>), a self-evolving <strong>Proposer-Solver</strong> framework that trains LLM search agents with <strong>RL</strong> on questions synthesized from verified <strong>multi-hop Wikidata KG paths</strong>.",
+      "Designed <strong>evidence acquisition</strong> and <strong>evidence utilization</strong> process rewards that credit actual retrieval of verified passages instead of entity mentions, curbing reward hacking.",
+      "Achieved the <strong>best average EM/F1 in all 5 training settings</strong> over SSP and KG-Path, winning <strong>18 of 20</strong> multi-hop comparisons; generated questions lift downstream multi-hop F1 from <strong>30.4 to 35.3</strong>.",
+    ],
+  },
+  {
+    title: "Machine Learning Engineer",
+    company_name: "StackAdapt",
+    icon: stackadapt,
+    iconBg: "#FFFFFF",
+    date: "Jan 2026 - April 2026",
+    tags: ["AI", "Backend", "RAG"],
+    points: [
+      "Shipped the <strong>Precision Audience</strong> LLM pipeline that converts unstructured advertiser ICPs into executable boolean segment plans across <strong>9 audience sources × 10 geo locations</strong> per request, built on <strong>GPT-5</strong> with <strong>Pydantic</strong>-typed structured outputs and an async <strong>Redis</strong>-backed worker pool.",
+      "Built a <strong>4-layer hallucination detection</strong> system (schema enforcement, reference-grounding, strict enum validation, safeguard rules) so every output segment maps to a validated upstream source.",
+      "Designed <strong>prompt hardening</strong> (injection detection, 10-category sensitive-data taxonomy) and a typed exception hierarchy with per-geo <strong>partial-success (207)</strong> responses.",
+      "Scaled coverage to <strong>~12.7K segments</strong> with hybrid retrieval on <strong>Qdrant</strong> (dense + BM25 + RRF, geo-indexed prefilter) and an incremental ingestion pipeline with snapshot/restore rollback to S3.",
+    ],
+  },
+  {
+    title: "Research Assistant - VIEScore2",
+    link: "https://github.com/TIGER-AI-Lab/VIEScore2",
+    company_name: "University of Waterloo (Prof. Wenhu Chen)",
+    icon: uwaterloo,
+    iconBg: "#FFF8DC",
+    date: "Oct 2025 - Present",
+    tags: ["Research", "AI", "Computer Vision"],
+    points: [
+      "Co-first authored <strong>VIEScore2</strong> (under review at <strong>ICLR 2027</strong>), a unified VLM evaluator for image generation and editing that jointly predicts quality scores and defect locations on a text-native <strong>N×N grid</strong>.",
+      "Unified <strong>38K</strong> training examples from <strong>5 sources</strong>; fine-tuned <strong>Qwen3-VL-8B</strong> via <strong>SFT</strong> (DeepSpeed ZeRO-3) followed by <strong>GRPO</strong> with cell-level Dice, score-accuracy, and format rewards.",
+      "Reached overall-score <strong>SRCC 0.601</strong> vs. 0.491 for Gemini-3-Flash; ranked <strong>1st</strong> in grid IoU on <strong>3 of 6</strong> defect-localization benchmarks and top-3 on 5.",
     ],
   },
   {
@@ -335,19 +415,30 @@ export const experiences = [
     ],
   },
   {
-    title: "Research Assistant",
-    link: "https://aclanthology.org/2025.findings-acl.207.pdf",
-    company_name: "RBC Borealis AI X McGill University",
-    icon: borealis,
-    iconBg: "#E1E8F0",
-    date: "Oct 2024 - Dec 2024",
-    tags: ["RAG", "Research", "AI"],
+    title: "Undergraduate Research Assistant - Noise Injection Analysis",
+    link: "https://github.com/XiandaDu/Noise-Injection-Analysis",
+    company_name: "University of Waterloo (Prof. En-Hui Yang)",
+    icon: uwaterloo,
+    iconBg: "#FFF8DC",
+    date: "Jan 2025 - April 2025",
+    tags: ["Research", "AI", "Computer Vision"],
     points: [
-      "Co-authored <strong>WXImpactBench (ACL 2025)</strong>, the first benchmark for LLMs' understanding of historical disruptive weather impacts, combining NLP and meteorology.",
-      "Processed <strong>53K+ OCR-scanned articles</strong> with GPT-4o post-OCR correction, LDA topic modeling, and expert curation; annotated <strong>1.7K samples</strong> across six societal impact categories.",
-      "Designed <strong>multi-label classification</strong> and <strong>ranking-based QA</strong> tasks; benchmarked 12 LLMs (GPT, DeepSeek, LLaMA, Mistral, Qwen, Gemma) with metrics including F1, row-wise accuracy, Hit@1, and nDCG@5.",
-      "Developed the <strong>ranking-based QA evaluation</strong> using GPT-4o for pseudo-question generation and a <strong>sliding window re-ranking pipeline</strong> implemented in <strong>Python, HuggingFace Transformers, and NumPy/pandas</strong>.",
-      "Developing(Follow-up Research: Oct 2025) a RAG study (ICLR-targeted) creating a climate-domain benchmark to assess <strong>retriever accuracy, climate adaptation, and generation quality</strong> for improving LLM reliability in domain specific tasks.",
+      "Studied effects of <strong>Gaussian noise</strong> (9 levels) and <strong>FGSM adversarial perturbations</strong> on intermediate feature representations in pretrained <strong>ResNet-18</strong> on ImageNet.",
+      "Analyzed feature maps across <strong>4 network layers</strong> using <strong>PyTorch</strong> forward hooks, generating statistical summaries and cross-layer distribution histograms.",
+    ],
+  },
+  {
+    title: "Research Assistant - Weather Archival Rescue",
+    link: "https://github.com/Weather-Archival-Rescue",
+    company_name: "McGill University (Prof. Renée Sieber) x RBC Borealis AI",
+    icon: mcgill,
+    iconBg: "#FFF0F5",
+    date: "Sept 2024 - Present",
+    tags: ["Research", "AI", "RAG", "Information Retrieval"],
+    points: [
+      "<strong>WXImpactBench (ACL 2025 Findings, co-first author):</strong> built the first benchmark for LLM understanding of disruptive weather impacts (<strong>1,736 samples</strong>, <strong>6 impact categories</strong>) with multi-label classification and <strong>100-passage ranking QA</strong>; processed <strong>53K+ OCR-scanned articles</strong> with GPT-4o post-OCR correction and expert curation.",
+      "<strong>WeatherArchive-Bench (SIGIR 2026, co-first author):</strong> built a retrieval-augmented reasoning benchmark over <strong>1M+ archival segments</strong> and <strong>335 expert queries</strong> with <strong>IPCC-aligned</strong> vulnerability and resilience assessment; benchmarked <strong>13+ retrievers</strong> and <strong>17 LLMs</strong>, peaking at <strong>95.8%</strong> Recall@100.",
+      "<strong>WXChat (ongoing):</strong> developing a digitization pipeline for Victorian-era newspapers with <strong>Tesseract 5</strong> OCR, layout-aware column segmentation (<strong>OpenCV</strong>), and async <strong>GPT-4o-mini</strong> post-OCR correction.",
     ],
   },
   {
@@ -409,6 +500,14 @@ export const experiences = [
   },
 ];
 
+// Research roles and industry roles are shown as two separate timelines on the home page.
+export const researchExperiences = experiences.filter((e) =>
+  e.tags.includes("Research")
+);
+export const professionalExperiences = experiences.filter(
+  (e) => !e.tags.includes("Research")
+);
+
 export const socialLinks = [
   {
     name: "Contact",
@@ -433,6 +532,47 @@ export const socialLinks = [
 ];
 
 export const projects = [
+  {
+    iconUrl: ai,
+    theme: "btn-back-blue",
+    name: "Mean Flows as Controllable Priors",
+    tags: {
+      "AI/ML": ["PyTorch", "JAX", "Generative Models", "Python"],
+      Research: ["NeurIPS Workshop", "ICLR Submission"],
+    },
+    description:
+      "Research code for <strong>training-free inverse problems</strong> with pretrained <strong>MeanFlow</strong> priors. Implements <strong>Receding-Horizon State Optimization (RHSO)</strong> alongside D-Flow, PnP-Flow and MPC-Flow on pixel- and latent-space priors (JiT, pMF, SiT-XL, iMF), with backend-agnostic operators and sharded <strong>SLURM</strong> sweeps.",
+    link: "https://github.com/Abdelaal495/controllable-image-generation",
+    demo: "",
+  },
+  {
+    iconUrl: ai,
+    theme: "btn-back-green",
+    name: "WeatherArchive-Bench",
+    tags: {
+      "AI/ML": ["RAG", "Information Retrieval", "LLM Evaluation", "Python"],
+      Research: ["SIGIR 2026"],
+    },
+    description:
+      "A retrieval-augmented reasoning benchmark over <strong>1M+ historical newspaper segments</strong> and <strong>335 expert queries</strong>. Evaluates <strong>13+ retrievers</strong> (BM25, SPLADE, ANCE, dense, rerankers via Pyserini) and <strong>17 LLMs</strong> on IPCC-aligned climate vulnerability assessment.",
+    link: "https://github.com/Weather-Archival-Rescue/WeatherArchive-Bench",
+    demo: "https://arxiv.org/abs/2510.05336",
+    demoLabel: "Read the Paper",
+  },
+  {
+    iconUrl: ai,
+    theme: "btn-back-orange",
+    name: "WXImpactBench",
+    tags: {
+      "AI/ML": ["LLM Evaluation", "Information Retrieval", "Python"],
+      Research: ["ACL 2025"],
+    },
+    description:
+      "The first benchmark for LLM understanding of <strong>disruptive weather impacts</strong>: <strong>1,736 samples</strong> across 6 societal impact categories, with <strong>multi-label classification</strong> and <strong>100-passage ranking QA</strong> tasks and a unified evaluation pipeline.",
+    link: "https://github.com/Weather-Archival-Rescue/WXImpactBench",
+    demo: "https://aclanthology.org/2025.findings-acl.207/",
+    demoLabel: "Read the Paper",
+  },
   {
     iconUrl: wallet,
     theme: "btn-back-green",
